@@ -182,3 +182,31 @@ button:hover {
     font-style: italic; 
     text-shadow: 2px 2px 4px black;
 }
+
+@media only screen and (max-width: 600px) {
+  .welcome-box{
+ width: 234px;
+  }
+  .welcome-box h1 {
+    font-size: 20px;
+  } 
+  .welcome-box button{
+    padding: 8px 14px;
+    font-size: 14px;
+  } 
+
+  .container{
+    max-width: 259px;
+  }
+  .container h2{
+    font-size: 20px;
+  }
+  .container label{
+    font-size: 14px;
+  }
+
+  button{
+    font-size: 14px;
+    padding: 7px 15px;
+  }
+}

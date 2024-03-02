@@ -65,7 +65,7 @@ function saveData() {
         confirmationMessage.style.display = 'block';
         setTimeout(function() {
             confirmationMessage.style.display = 'none';
-        }, 3000);
+        }, 5000);
     } else {
         confirmationMessage.style.display = 'none';
     }
