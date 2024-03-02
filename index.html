@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mindfulness Meditation App Onboarding</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="/Images/logo.jpg"
+      alt="logo" />
+      <h1 id="header-text"></h1>
+  </header>
+    <div class="background-video">
+      <video autoplay muted loop id="bgVideo">
+        <source src="Images/vid1.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="welcome-box" id="welcomeBox">
+      <h1>Welcome to the  Be Blissful Yoga</h1>
+      <p>Get started with your meditation journey.</p>
+      <button onclick="startOnboarding()">Let's Start</button>
+    </div>
+
+    <div class="container hidden" id="container">
+      <div id="onboarding">
+        <div id="step0" class="step">
+         
+          <h2> Enter Your Name and Email</h2>
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" />
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter your email"/>
+          <label for="age">Age:</label>
+          <input type="number" id="age" placeholder="Enter your age"/>
+          <div class="btn">
+            <button class="btn-step0" onclick="nextStep()">Next</button>
+          </div>
+       
+        </div>
+
+        <div id="step1" class="step hidden">
+          <h2>Step 1: Tell us about your meditation experience</h2>
+          <label for="frequency">How often do you meditate?</label>
+          <select id="frequency">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="occasionally">Occasionally</option>
+            <option value="never">Never</option>
+          </select>
+        
+          <label for="MindfulnessTrait ">Mindfulness Trait </label>
+          <select id="MindfulnessTrait">
+            <option value="Patience">Patience</option>
+            <option value="Awareness">Awareness</option>
+            <option value="Compassion">Compassion</option>
+            <option value="Serenity">Serenity</option>
+          </select>
+          <div class="btn">
+          <button  onclick="goBack()">Back</button>
+          <button onclick="nextStep()">Next</button>
+        </div>
+        </div>
+        <div id="step2" class="step hidden">
+          <h2>Step 2: Choose your preferred meditation techniques</h2>
+          <label for="techniques"
+            >Select your preferred techniques (hold Ctrl/Cmd to select
+            multiple)</label
+          >
+          <select id="techniques" multiple>
+            <option value="mindfulness">Mindfulness</option>
+            <option value="loving-kindness">Loving-Kindness</option>
+            <option value="body scan">Body Scan</option>
+            <option value="breath awareness">Breath Awareness</option>
+          </select>
+          <div class="btn">
+            <button onclick="goBack()">Back</button>
+            <button onclick="nextStep()">Next</button>
+          </div>
+        </div>
+        <div id="step3" class="step hidden">
+          <h2>Step 3: Share your meditation goals</h2>
+          <label for="goals">What are your meditation goals?</label>
+          <textarea id="goals"></textarea>
+          <button class="btn-step3" onclick="saveData()">Finish</button>
+        </div>
+      </div>
+    </div>
+    <div id="confirmation-message" class="message" style="display: none"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
